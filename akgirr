@@ -1,0 +1,40 @@
+// Kelompok 4: Jery Yosua Manulang, Bindu Hosea Marbun, Daniel Saputra
+#include <iostream>
+using namespace std;
+
+int main (){
+    int id_tiket=0;
+    string nama, email, notelp, pembayaran;
+    int harga, jumlahtiket, uangdibayar;
+
+    cout << "Selamat Datang di Program Pembelian Tiket Konser Paduan Suara Gita Sasmita "<< endl;
+    cout << "Masukan nama Anda: ";
+    cin >> nama;
+    cout << "Masukan Email Anda: ";
+    cin >> email;
+    cout << "Masukan Nomor Telepon Anda: ";
+    cin >> notelp;
+    cout << "Berapa Jumlah Tiket Yang Anda Pesan? ";
+    cin >> jumlahtiket;
+
+    harga = jumlahtiket*65000;
+    cout << "Bayar tiket seharga " << harga << "!" << endl;
+    cout << "Masukkan Uang Anda: ";
+    cin >> uangdibayar;
+
+    if (uangdibayar == harga) {
+        pembayaran = "Valid";
+        id_tiket = id_tiket +1;
+        cout << "e-tiket Anda"<< endl;
+        cout << "=== KONSER PSM GITA SASMITA 2025: GEMA GUMILAR ===" << endl;
+        cout << "Kamis, 11 Desember 2025 18:30 - 20:00 \nTeleconference Universitas Pamulang \nGedung C Lantai 12, Kampus UNPAM Viktor \nPamulang, Tangerang Selatan";
+        cout << endl << nama << endl << email << endl;
+        cout << "ID TICKET: " << id_tiket << endl << "Tiket Ini Mewakili: " << jumlahtiket << " Orang Penonton" << endl;
+        cout << endl << "\nATURAN MASUK UNTUK PEMEGANG TIKET \nTempat duduk bersifat bebas dan akan diberikan berdasarkan \nprinsip first-come, first-served. Pintu masuk akan dibuka pada \npukul 17:30, dan setiap penonton wajib menunjukkan e-tiket ini di \nmeja registrasi sebelum memasuki area konser. Dilarang keras \nmemperbanyak atau menyebarkan tiket ini dalam bentuk apa pun."<< endl;
+        cout << "e-tiket Anda telah dikirimkan ke email: "<< email << endl;
+    } else {
+        pembayaran = "Tidak Valid";
+        cout << "Pembayaran tidak valid" << endl;
+        cout << "Hubungi no 085122879 untuk konfirmasi"; 
+    }
+}
